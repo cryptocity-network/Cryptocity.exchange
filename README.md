@@ -20,7 +20,7 @@ https://hello.nuxt.dev
 Make sure to install the dependencies with [pnpm](https://pnpm.io/installation#using-corepack):
 
 ```bash
-pnpm install
+npm install
 ```
 
 You can update the main text displayed by creating a `.env`:
@@ -34,7 +34,7 @@ NUXT_PUBLIC_HELLO_TEXT="Hello my world!"
 Start the development server on `http://localhost:3000`:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 ## Production
@@ -42,11 +42,10 @@ pnpm dev
 Build the application for production:
 
 ```bash
-pnpm build
+npm run build
 ```
 
 ## Deploy
-
 
 Deploy the application on the Edge with [NuxtHub](https://hub.nuxt.com) on your Cloudflare account:
 
@@ -57,4 +56,3 @@ npx nuxthub deploy
 Then checkout your server logs, analaytics and more in the [NuxtHub Admin](https://admin.hub.nuxt.com).
 
 You can also deploy using [Cloudflare Pages CI](https://hub.nuxt.com/docs/getting-started/deploy#cloudflare-pages-ci).
-
