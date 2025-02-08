@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxt/eslint',
     '@unocss/nuxt',
+    '@nuxtjs/i18n',
   ],
 
   // https://devtools.nuxt.com
@@ -29,5 +30,27 @@ export default defineNuxtConfig({
     config: {
       standalone: false,
     },
+  },
+
+  // https://i18n.nuxtjs.org
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.json',
+      },
+      {
+        code: 'de',
+        iso: 'de-DE',
+        file: 'de.json',
+      },
+      {
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es.json',
+      },
+    ],
+    defaultLocale: 'en',
   },
 })
