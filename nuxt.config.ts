@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxthub/core',
     '@nuxt/eslint',
+    '@unocss/nuxt',
   ],
 
   // https://devtools.nuxt.com
