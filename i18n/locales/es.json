@@ -1,3 +1,8 @@
 {
-  "Refresh": "Refrescar"
+  "Refresh": "Refrescar",
+  "Locales": {
+    "en": "Inglés",
+    "es": "Español",
+    "de": "Alemán"
+  }
 }

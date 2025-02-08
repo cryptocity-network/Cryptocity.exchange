@@ -1,3 +1,8 @@
 {
-  "Refresh": "Refresh"
+  "Refresh": "Refresh",
+  "Locales": {
+    "en": "English",
+    "es": "Spanish",
+    "de": "German"
+  }
 }

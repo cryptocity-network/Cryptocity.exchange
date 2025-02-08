@@ -1,3 +1,8 @@
 {
-  "Refresh": "Aktualisieren"
+  "Refresh": "Aktualisieren",
+  "Locales": {
+    "en": "Englisch",
+    "es": "Spanisch",
+    "de": "Deutsch"
+  }
 }
