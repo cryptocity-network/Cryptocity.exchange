@@ -20,6 +20,16 @@ useHead({
     { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
     { rel: 'icon', type: 'image/png', href: '/favicon-128x128.png', sizes: '128x128' },
     { rel: 'icon', type: 'image/png', href: '/favicon-196x196.png', sizes: '196x196' },
+    {
+      rel: 'stylesheet',
+      type: 'text/css',
+      href: 'https://letsexchange.io/widget_lets.css',
+    },
+  ],
+  script: [
+    {
+      src: 'https://letsexchange.io/init_widget.js',
+    },
   ],
 })
 </script>

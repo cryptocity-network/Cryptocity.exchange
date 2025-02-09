@@ -1,8 +1,6 @@
 <template>
-  <div>
+  <div class="container flex justify-center">
     <CoinifyWidget />
+    <LetsexchangeWidget />
   </div>
 </template>
-
-<style scoped>
-</style>

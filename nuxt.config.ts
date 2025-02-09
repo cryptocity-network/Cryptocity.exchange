@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       coinifyUrl: '',
+      letsexchangeUrl: '',
     },
   },
   // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
