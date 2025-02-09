@@ -1,6 +1,6 @@
 <template>
   <div>
-    Index page
+    <CoinifyWidget />
   </div>
 </template>
 
