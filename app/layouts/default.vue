@@ -36,10 +36,10 @@ useHead({
 
 <template>
   <div>
-    <Header :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
+    <AppHeader :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
     <main>
       <slot />
     </main>
-    <Footer :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
+    <AppFooter :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
   </div>
 </template>
