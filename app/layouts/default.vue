@@ -3,7 +3,7 @@ const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const availableLocales = computed(() => {
-  return locales.value.filter(i => i.code !== locale.value)
+  return locales.value
 })
 
 const lang = computed(() =>
@@ -36,19 +36,10 @@ useHead({
 
 <template>
   <div>
-    <header>
-      This is the header
-      <nav>
-        <NuxtLink v-for="availableLocale in availableLocales" :key="availableLocale.code" :to="switchLocalePath(availableLocale.code)">
-          {{ t(`Locales.${availableLocale.code}`) }}
-        </NuxtLink>
-      </nav>
-    </header>
+    <Header :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
     <main>
       <slot />
     </main>
-    <footer>
-      This is the footer
-    </footer>
+    <Footer />
   </div>
 </template>

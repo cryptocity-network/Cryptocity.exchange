@@ -14,6 +14,14 @@ export default defineConfig({
     presetAttributify(),
     presetIcons(),
   ],
+  preflights: [
+    {
+      getCSS: () => `
+        body { background-color: #F8F8F8; }
+         * { color: rgba(31, 35, 72, 0.6); }
+      `,
+    },
+  ],
   theme: {
     breakpoints: {
       sm: '375px',
