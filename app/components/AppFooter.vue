@@ -46,9 +46,9 @@ const { t } = useI18n()
         <!-- Right Column - Logos -->
         <div class="col-span-3">
           <div class="flex flex-col md:flex-row items-start space-y-16 md:space-x-24 md:space-y-0 mb-32">
-            <NuxtImg src="/criptociudad.svg" alt="Criptociudad" class="w-auto" />
-            <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" class="w-auto" />
-            <NuxtImg src="/criptocidade.svg" alt="Criptocidade" class="w-auto" />
+            <NuxtImg src="/criptociudad.svg" alt="Criptociudad" width="150" height="50" />
+            <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" width="150" height="50" />
+            <NuxtImg src="/criptocidade.svg" alt="Criptocidade" width="150" height="50" />
           </div>
 
           <div class="">

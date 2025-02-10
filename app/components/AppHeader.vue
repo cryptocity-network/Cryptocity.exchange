@@ -8,7 +8,7 @@ const { t } = useI18n()
       <!-- Logo Section -->
       <div class="flex items-center">
         <NuxtLink to="/">
-          <NuxtImg src="/logo.svg" alt="Cryptocity Logo" class="w-auto" />
+          <NuxtImg src="/logo.svg" alt="Cryptocity Logo" width="150" height="50" />
         </NuxtLink>
       </div>
 
