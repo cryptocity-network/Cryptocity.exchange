@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <footer class="">
     <div class="container mx-auto md:px-55">
@@ -6,35 +10,33 @@
         <!-- Left Column -->
         <div class="space-y-16 col-span-1">
           <div class="flex items-center pb-16">
-            <!-- <img src="/en-flag.svg" alt="English" class="h-15 w-22" /> -->
             <SelectLanguage />
-            <!-- <span class="text-sm">EN</span> -->
           </div>
           <nav>
             <ul class="space-y-12 nq-style">
               <li>
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
-                  Für Einzelhändler
+                  {{ t('ForRetailers') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
-                  Für Einsteiger
+                  {{ t('ForBeginners') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
-                  Das Netzwerk
+                  {{ t('TheNetwork') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
-                  Über uns
+                  {{ t('AboutUs') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
-                  News
+                  {{ t('News') }}
                 </NuxtLink>
               </li>
             </ul>
@@ -51,16 +53,12 @@
 
           <div class="">
             <h3 class="nq-h3 mb-8">
-              Notice pursuant to § 29 (1) of the German Securities
-              Institute Act
-              (WpIG)
+              {{ t('Notice') }}
             </h3>
             <p class="nq-text-s mb-32">
-              Nimiq Labs GmbH operates as a tied agent within the meaning of § 3 (2) WpIG and engages
-              exclusively in investment brokerage activities on behalf and under the liability of CONCEDUS
-              GmbH, Eckental, in accordance with § 2 (2) No. 3 WpIG.
+              {{ t('NoticeText') }}
               <NuxtLink to="#" class="">
-                Learn more about Concedus
+                {{ t('LearnMoreAboutConcedus') }}
               </NuxtLink>
             </p>
             <p class="nq-text-s">
@@ -81,11 +79,11 @@
       <div class="grid grid-cols-1 md:grid-cols-4">
         <div class="col-span-1 relative top-[-19px]">
           <NuxtLink to="#" class="transition-colors">
-            Imprint
+            {{ t('Imprint') }}
           </NuxtLink>
           <span class="px-16">•</span>
           <NuxtLink to="#" class=" transition-colors">
-            Privacy
+            {{ t('Privacy') }}
           </NuxtLink>
           <p class="mt-16">
             © Cryptocity Association 2023
@@ -95,16 +93,15 @@
         <!-- <div class="text-lg">   </div> -->
         <div class="col-span-3 flex-wrap flex items-center">
           <NuxtLink to="#" class=" pr-8 border-r border-gray-300">
-            Zum ausführlichen
-            Haftungsausschluss
+            {{ t('Disclaimer') }}
           </NuxtLink>
 
           <NuxtLink to="#" class="pl-8 pr-8 border-r border-gray-300">
-            Datenschutzerklärung
+            {{ t('PrivacyPolicy') }}
           </NuxtLink>
 
           <NuxtLink to="#" class="pl-8">
-            Verwendung von Cookies
+            {{ t('CookieUsage') }}
           </NuxtLink>
         </div>
       </div>
