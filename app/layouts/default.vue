@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const { t, locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-
-const availableLocales = computed(() => {
-  return locales.value
-})
+const { locale } = useI18n()
 
 const lang = computed(() =>
   locale.value,
@@ -36,10 +31,10 @@ useHead({
 
 <template>
   <div>
-    <AppHeader :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
+    <AppHeader />
     <main>
       <slot />
     </main>
-    <AppFooter :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
+    <AppFooter />
   </div>
 </template>
