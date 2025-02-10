@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@unocss/nuxt',
     '@nuxtjs/i18n',
+    '@nuxt/image',
   ],
 
   // https://devtools.nuxt.com

@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <footer class="">
+  <footer>
     <div class="container mx-auto md:px-55">
       <!-- Main Footer Content -->
       <div class="grid grid-cols-1 md:grid-cols-4 mb-12">
@@ -46,9 +46,9 @@ const { t } = useI18n()
         <!-- Right Column - Logos -->
         <div class="col-span-3">
           <div class="flex flex-col md:flex-row items-start space-y-16 md:space-x-24 md:space-y-0 mb-32">
-            <img src="/criptociudad.svg" alt="Criptociudad" class=" w-auto">
-            <img src="/kryptostadt.svg" alt="Kryptostadt" class=" w-auto">
-            <img src="/criptocidade.svg" alt="Criptocidade" class="w-auto">
+            <NuxtImg src="/criptociudad.svg" alt="Criptociudad" class="w-auto" />
+            <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" class="w-auto" />
+            <NuxtImg src="/criptocidade.svg" alt="Criptocidade" class="w-auto" />
           </div>
 
           <div class="">

@@ -4,7 +4,7 @@
       <div class="i-flag:de-4x3" />
     </SwitchLocalePathLink>
     <SwitchLocalePathLink locale="en">
-      <div class="i-flag:us-4x3" />
+      <div class="i-flag:sh-4x3" />
     </SwitchLocalePathLink>
     <SwitchLocalePathLink locale="es">
       <div class="i-flag:es-4x3" />

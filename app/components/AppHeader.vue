@@ -8,19 +8,17 @@ const { t } = useI18n()
       <!-- Logo Section -->
       <div class="flex items-center">
         <NuxtLink to="/">
-          <img src="/logo.svg" alt="Cryptocity Logo" class="cursor-pointer">
+          <NuxtImg src="/logo.svg" alt="Cryptocity Logo" class="w-auto" />
         </NuxtLink>
       </div>
 
       <!-- Right Section -->
-      <div class="flex items-center h-full">
-        <a href="#" class="font-bold pr-32">
+      <nav class="flex items-center h-full">
+        <NuxtLink to="#" class="font-bold pr-32">
           {{ t('LearnMore') }}
-        </a>
-        <nav>
-          <SelectLanguage />
-        </nav>
-      </div>
+        </NuxtLink>
+        <SelectLanguage />
+      </nav>
     </div>
   </header>
 </template>
