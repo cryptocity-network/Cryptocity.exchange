@@ -40,6 +40,6 @@ useHead({
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer :availableLocales="availableLocales" :switchLocalePath="switchLocalePath" :t="t" />
   </div>
 </template>

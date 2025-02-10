@@ -4,7 +4,7 @@
             <!-- Logo Section -->
             <div class="flex items-center">
                 <NuxtLink to="/">
-                    <img src="/logo.png" alt="Cryptocity Logo" class="cursor-pointer" />
+                    <img src="/logo.svg" alt="Cryptocity Logo" class="cursor-pointer" />
                 </NuxtLink>
          
             </div>

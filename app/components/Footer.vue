@@ -2,11 +2,18 @@
     <footer class="">
         <div class="container mx-auto md:px-55">
             <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 mb-12">
                 <!-- Left Column -->
                 <div class="space-y-16 col-span-1">
                     <div class="flex items-center pb-16">
-                        <img src="/en-flag.svg" alt="English" class="h-15 w-22" />
+                        <!-- <img src="/en-flag.svg" alt="English" class="h-15 w-22" /> -->
+                        <select v-model="selectedLocale" @change="switchLocale"
+                        class="bg-transparent px-3 py-1.5transition-colors">
+                        <option v-for="availableLocale in availableLocales" :key="availableLocale.code"
+                            :value="availableLocale.code">
+                            {{ t(`Locales.${availableLocale.code}`) }}
+                        </option>
+                    </select>
                         <!-- <span class="text-sm">EN</span> -->
                     </div>
                     <nav>
@@ -34,9 +41,9 @@
                 <!-- Right Column - Logos -->
                 <div class="col-span-3">
                     <div class="flex flex-col md:flex-row items-start space-y-16 md:space-x-24 md:space-y-0 mb-32">
-                        <img src="/criptociudad.png" alt="Criptociudad" class=" w-auto" />
-                        <img src="/kryptostadt.png" alt="Kryptostadt" class=" w-auto" />
-                        <img src="/criptocidade.png" alt="Criptocidade" class="w-auto" />
+                        <img src="/criptociudad.svg" alt="Criptociudad" class=" w-auto" />
+                        <img src="/kryptostadt.svg" alt="Kryptostadt" class=" w-auto" />
+                        <img src="/criptocidade.svg" alt="Criptocidade" class="w-auto" />
                     </div>
 
                     <div class="">
@@ -93,5 +100,21 @@
     </footer>
 </template>
 <script>
-export default {}
+export default {
+    props: {
+        availableLocales: Array,
+        switchLocalePath: Function,
+        t: Function
+    },
+    data() {
+        return {
+            selectedLocale: this.availableLocales[0].code // Default to the first locale
+        }
+    },
+    methods: {
+        switchLocale() {
+            this.$router.push(this.switchLocalePath(this.selectedLocale));
+        }
+    }
+}
 </script>
