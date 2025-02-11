@@ -10,7 +10,6 @@ export default defineConfig({
       utilities: true,
       attributifyUtilities: true,
     }),
-    presetRemToPx({ baseFontSize: 4 }),
     presetAttributify(),
     presetIcons(),
   ],

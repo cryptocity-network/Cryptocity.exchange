@@ -4,33 +4,33 @@ const swap = ref(false)
 
 <template>
   <section>
-    <div class="container mx-auto mt-120 mb-120">
-      <div class="grid grid-cols-1 md:grid-cols-2 min-h-610">
+    <div class="container mx-auto mt-30 mb-30">
+      <div class="grid grid-cols-1 md:grid-cols-2 min-h-[610px]">
         <div class="flex col-span-1 justify-center">
           <div class="flex flex-col">
-            <div class="space-y-4 mb-12">
-              <h1 class="nq-h1 font-size-48 pb-32">
+            <div class="space-y-1 mb-3">
+              <h1 class="pb-8">
                 Buy and Sell<br>Crypto
               </h1>
-              <p class="nq-style pb-32">
+              <p class="pb-8">
                 Buy and Sell NIM with<br>
                 Euro, USD, CHF and more!
               </p>
-              <div class="flex space-x-4 pb-100">
-                <SwitchButton v-model="swap" />
+              <div class="pb-20">
+                <SliderToggle v-model="swap" />
               </div>
             </div>
 
-            <div class="grid grid-cols-2 border-2 border-gray-200 rounded-3xl px-30 py-20">
+            <div class="grid grid-cols-2 border-2 border-gray-200 rounded-3xl px-10 py-5">
               <div class="col-span-1 ">
-                <p class="nq-text-l">
+                <p>
                   Get your self hosted<br>
                   wallet in 30 sec!
                 </p>
 
-                <a class="nq-link">
+                <NuxtLink to="#">
                   Create
-                </a>
+                </NuxtLink>
               </div>
 
               <div class="col-span-1 flex flex-col items-center">
@@ -52,9 +52,9 @@ const swap = ref(false)
                     alt="USDT"
                   >
                 </div>
-                <div class="nq-text-s uppercase">
+                <small class="uppercase">
                   Supported currencies
-                </div>
+                </small>
               </div>
             </div>
           </div>

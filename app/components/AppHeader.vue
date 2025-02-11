@@ -14,7 +14,7 @@ const { t } = useI18n()
 
       <!-- Right Section -->
       <nav class="flex items-center h-full">
-        <NuxtLink to="#" class="font-bold pr-32">
+        <NuxtLink to="#" class="font-bold pr-8">
           {{ t('LearnMore') }}
         </NuxtLink>
         <SelectLanguage />

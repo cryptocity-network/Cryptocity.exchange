@@ -4,33 +4,33 @@ const { t } = useI18n()
 
 <template>
   <footer>
-    <div class="container mx-auto md:px-55">
+    <div class="container mx-auto md:px-12">
       <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-4 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 mb-4">
         <!-- Left Column -->
-        <div class="space-y-16 col-span-1">
-          <div class="flex items-center pb-16">
+        <div class="space-y-4 col-span-1">
+          <div class="flex items-center pb-4">
             <SelectLanguage />
           </div>
           <nav>
-            <ul class="space-y-12 nq-style">
+            <ul class="space-y-4">
               <li>
-                <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
+                <NuxtLink to="#">
                   {{ t('ForRetailers') }}
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
+                <NuxtLink to="#">
                   {{ t('ForBeginners') }}
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
+                <NuxtLink to="#">
                   {{ t('TheNetwork') }}
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
+                <NuxtLink to="#">
                   {{ t('AboutUs') }}
                 </NuxtLink>
               </li>
@@ -45,23 +45,23 @@ const { t } = useI18n()
 
         <!-- Right Column - Logos -->
         <div class="col-span-3">
-          <div class="flex flex-col md:flex-row items-start space-y-16 md:space-x-24 md:space-y-0 mb-32">
+          <div class="flex flex-col md:flex-row items-start space-y-4 md:space-x-6 md:space-y-0 mb-8">
             <NuxtImg src="/criptociudad.svg" alt="Criptociudad" width="150" height="50" />
             <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" width="150" height="50" />
             <NuxtImg src="/criptocidade.svg" alt="Criptocidade" width="150" height="50" />
           </div>
 
-          <div class="">
-            <h3 class="nq-h3 mb-8">
+          <div>
+            <h3 class="mb-2">
               {{ t('Notice') }}
             </h3>
-            <p class="nq-text-s mb-32">
+            <p class="mb-8">
               {{ t('NoticeText') }}
               <NuxtLink to="#" class="">
                 {{ t('LearnMoreAboutConcedus') }}
               </NuxtLink>
             </p>
-            <p class="nq-text-s">
+            <p>
               Nimiq Labs GmbH is registered with the Federal Financial Supervisory Authority (BaFin) as a
               tied
               agent of CONCEDUS GmbH and is listed in the BaFin register of tied agents under the
@@ -78,29 +78,28 @@ const { t } = useI18n()
 
       <div class="grid grid-cols-1 md:grid-cols-4">
         <div class="col-span-1 relative top-[-19px]">
-          <NuxtLink to="#" class="transition-colors">
+          <NuxtLink to="#">
             {{ t('Imprint') }}
           </NuxtLink>
-          <span class="px-16">•</span>
-          <NuxtLink to="#" class=" transition-colors">
+          <span class="px-4">•</span>
+          <NuxtLink to="#">
             {{ t('Privacy') }}
           </NuxtLink>
-          <p class="mt-16">
+          <p class="mt-4">
             © Cryptocity Association 2023
           </p>
         </div>
 
-        <!-- <div class="text-lg">   </div> -->
         <div class="col-span-3 flex-wrap flex items-center">
-          <NuxtLink to="#" class=" pr-8 border-r border-gray-300">
+          <NuxtLink to="#" class="pr-2 border-r border-gray-300">
             {{ t('Disclaimer') }}
           </NuxtLink>
 
-          <NuxtLink to="#" class="pl-8 pr-8 border-r border-gray-300">
+          <NuxtLink to="#" class="pl-2 pr-2 border-r border-gray-300">
             {{ t('PrivacyPolicy') }}
           </NuxtLink>
 
-          <NuxtLink to="#" class="pl-8">
+          <NuxtLink to="#" class="pl-2">
             {{ t('CookieUsage') }}
           </NuxtLink>
         </div>

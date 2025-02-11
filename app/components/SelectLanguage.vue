@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row space-x-12">
+  <div class="flex flex-row space-x-3">
     <SwitchLocalePathLink locale="de">
       <div class="i-flag:de-4x3" />
     </SwitchLocalePathLink>
