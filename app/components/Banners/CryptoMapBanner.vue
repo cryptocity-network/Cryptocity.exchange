@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-[480px] md:h-[322px] rounded-3xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10">
+  <section class="relative h-[480px] md:h-[322px] rounded-3xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10 md:mt-30">
     <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-[#1F2348] via-[#1F2348]/100 to-transparent">
     </div>

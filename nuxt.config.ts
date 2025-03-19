@@ -40,19 +40,24 @@ export default defineNuxtConfig({
       {
         code: 'en',
         iso: 'en-US',
+        name: 'English',
         file: 'en.json',
       },
       {
         code: 'de',
         iso: 'de-DE',
+        name: 'Deutsch',
         file: 'de.json',
       },
       {
         code: 'es',
         iso: 'es-ES',
+        name: 'Español',
         file: 'es.json',
       },
     ],
     defaultLocale: 'en',
+    detectBrowserLanguage: false
+    
   },
 })

@@ -33,7 +33,7 @@ const swap = ref(false);
           <div class="col-span-1">
             <p class="text-netural mb-2 max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
             <!-- TODO: link from design is using gradiant blue -->
-            <NuxtLink to="#" class="text-blue">Create</NuxtLink>
+            <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create</NuxtLink>
 
           </div>
           <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
@@ -67,7 +67,7 @@ const swap = ref(false);
           <div class="col-span-1">
             <p class="text-netural mb-2  max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
             <!-- TODO: link from design is using gradiant blue -->
-            <NuxtLink to="#" class="text-blue">Create</NuxtLink>
+            <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create</NuxtLink>
 
           </div>
           <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">

@@ -7,7 +7,7 @@
         <h2 class="text-4xl font-bold text-white my-4">
           Nimiq Pay
         </h2>
-        <p class="text-white/90 text-xl mb-8">
+        <p class="text-white/90 text-lg mb-8 w-[280px]">
           Pay with NIM in over 90'000 locations and shops
         </p>
 
@@ -42,7 +42,10 @@
 
                 <!-- Store Button -->
                 <div class="flex justify-center py-4">
-                  <img src="/appstore.svg" alt="Download on the App Store" class="h-10" />
+                  <a href="https://apps.apple.com/us/app/nimiq-pay/id6471844738" target="_blank"
+                    rel="noopener noreferrer"><img src="/appstore.svg" alt="Download on the App Store"
+                      class="h-10" /></a>
+
                 </div>
 
 
@@ -77,7 +80,10 @@
 
                 <!-- Store Button -->
                 <div class="flex justify-center py-4">
-                  <img src="/play-store.svg" alt="Download on the App Store" class="h-10" />
+                  <a href="https://play.google.com/store/apps/details?id=com.nimiq.pay" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/play-store.svg" alt="Download on the App Store" class="h-10" />
+                  </a>
                 </div>
 
 
@@ -116,7 +122,7 @@
   position: absolute;
   width: 350px;
   height: 280px;
-  bottom: 0;
+  bottom: -5px;
   right: 50px;
 }
 
