@@ -17,7 +17,7 @@ const { t } = useI18n()
         <NuxtLink to="#" class="font-bold pr-8">
           {{ t('LearnMore') }}
         </NuxtLink>
-        <SelectLanguage />
+        <SelectLanguage :showFlag="false"/>
       </nav>
     </div>
   </header>

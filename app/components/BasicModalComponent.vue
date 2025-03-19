@@ -14,18 +14,18 @@ const open = defineModel<boolean>('open')
                 <DialogOverlay fixed inset-0 z-200 bg-darkblue op-60 />
             </Transition>
             <Transition name="modal">
-                <DialogContent xl="top-1/2 left-1/2 translate--1/2" rounded="t-8 xl:8" data-modal xl:max-w-200 fixed
-                    bottom-0 z-200 h-max max-h-85dvh w-full transform of-y-auto shadow-lg outline-none
+                <DialogContent class="top-1/2 left-1/2 translate--1/2 w-[440px] h-[409px]" rounded="4" data-modal fixed
+                    bottom-0 z-200 transform of-y-auto shadow-lg outline-none
                     @open-auto-focus.prevent>
-                    <div relative bg-neutral-0 py-32 ring="1.5 neutral/3" class="modal-container">
-                        <DialogTitle text="24 center neutral lh-24" xl:px-40 mb-12 px-24 font-bold lh-none as="h2">
+                    <div relative bg-neutral-0 ring="1.5 neutral/3" class="modal-container py-4">
+                        <DialogTitle text="24 center neutral lh-24" px-4 mb-4 font-bold lh-none as="h2">
                             <slot name="title" />
                         </DialogTitle>
-                        <DialogDescription text="center neutral" xl:px-40 block px-24>
+                        <DialogDescription text="center neutral" class="px-4 block"  >
                             <slot name="description" />
                         </DialogDescription>
 
-                        <div xl:px-40 mt-12 px-24>
+                        <div>
                             <slot name="content" />
                         </div>
 

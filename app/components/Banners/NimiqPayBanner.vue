@@ -22,26 +22,26 @@
 
             <template #content>
               <!-- Modal Content -->
-              <div class="relative bg-white rounded-3xl p-8 max-w-md w-full text-center">
+              <div class="relative bg-white rounded-3xl py-4 max-w-md w-full text-center">
 
 
-                <h3 class="text-2xl font-bold text-[#1F2348] mb-2">
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
                   Download Nimiq Pay
                 </h3>
-                <p class="text-gray-600 mb-6">
+                <p class="text-gray-600 mb-6 font-semibold text-lg">
                   Scan the QR Code
                 </p>
 
                 <!-- QR Code -->
                 <div class="flex justify-center mb-6">
                   <div>
-                    <img src="/appstore-qrcode.svg" alt="QR Code" class="w-48 h-48" />
+                    <img src="/appstore-qrcode.svg" alt="QR Code" class="w-[137px] h-[137px]" />
                   </div>
 
                 </div>
 
                 <!-- Store Button -->
-                <div class="flex justify-center">
+                <div class="flex justify-center py-4">
                   <img src="/appstore.svg" alt="Download on the App Store" class="h-10" />
                 </div>
 
@@ -57,7 +57,31 @@
             </template>
 
             <template #content>
-              <p>Modal content</p>
+              <div class="relative bg-white rounded-3xl py-4 max-w-md w-full text-center">
+
+
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
+                  Download Nimiq Pay
+                </h3>
+                <p class="text-gray-600 mb-6 font-semibold text-lg">
+                  Scan the QR Code
+                </p>
+
+                <!-- QR Code -->
+                <div class="flex justify-center mb-6">
+                  <div>
+                    <img src="/playstore-qrcode.svg" alt="QR Code" class="w-[137px] h-[137px]" />
+                  </div>
+
+                </div>
+
+                <!-- Store Button -->
+                <div class="flex justify-center py-4">
+                  <img src="/play-store.svg" alt="Download on the App Store" class="h-10" />
+                </div>
+
+
+              </div>
             </template>
           </BasicModalComponent>
 
@@ -100,10 +124,10 @@
 
 @media screen and (max-width: 768px) {
   .bg-nimiqpay {
-  background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
-  background-size: cover;
-  background-position: right 0px bottom 0px;
-}
+    background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
+    background-size: cover;
+    background-position: right 0px bottom 0px;
+  }
 
   .nimiqpay-phone {
     width: 250px;
