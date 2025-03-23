@@ -1,11 +1,11 @@
 <template>
-  <section class="relative h-[480px] md:h-[322px] rounded-3xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10 md:mt-30">
+  <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10 md:mt-30 mx-4 md:mx-0">
     <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-[#1F2348] via-[#1F2348]/100 to-transparent">
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 h-full flex flex-col justify-center p-8 max-w-md">
+    <div class="relative z-10 h-full flex flex-col justify-center p-8 ">
       <!-- Map Icon -->
       <div class="md:pl-14">
         <div class="mb-6">

@@ -29,7 +29,9 @@ const open = defineModel<boolean>('open')
                             <slot name="content" />
                         </div>
 
-                        <DialogClose aria-label="Close" close-btn absolute right-16 top-16 text-28 />
+                        <DialogClose aria-label="Close" asChild absolute right-2 top-2 w-10 h-10 cursor-pointer >
+                            <img src="/close.svg" alt="close">
+                        </DialogClose>
                     </div>
                 </DialogContent>
             </Transition>

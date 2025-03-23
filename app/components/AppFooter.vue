@@ -4,37 +4,37 @@ const { t } = useI18n()
 
 <template>
   <footer>
-    <div class="container mx-auto md:px-12">
+    <div class="container mx-auto md:px-12 py-12 px-2">
       <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-4 mb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4 mb-4">
         <!-- Left Column -->
         <div class="space-y-4 col-span-1">
           <div class="flex items-center pb-4">
             <SelectLanguage />
           </div>
           <nav>
-            <ul class="space-y-4">
-              <li>
+            <ul class="lg:space-y-4 flex flex-row flex-wrap leading-loose lg:block">
+              <li class="pr-4  lg:px-0 lg:border-0  border-r border-gray-300">
                 <NuxtLink to="#">
                   {{ t('ForRetailers') }}
                 </NuxtLink>
               </li>
-              <li>
+              <li class="px-4 lg:px-0 lg:border-0 border-r border-gray-300">
                 <NuxtLink to="#">
                   {{ t('ForBeginners') }}
                 </NuxtLink>
               </li>
-              <li>
+              <li class="px-4 lg:px-0 lg:border-0  border-r border-gray-300">
                 <NuxtLink to="#">
                   {{ t('TheNetwork') }}
                 </NuxtLink>
               </li>
-              <li>
+              <li class="px-4 lg:px-0 lg:border-0  border-r border-gray-300">
                 <NuxtLink to="#">
                   {{ t('AboutUs') }}
                 </NuxtLink>
               </li>
-              <li>
+              <li class="px-4 lg:px-0 ">
                 <NuxtLink to="#" class="hover:text-blue-400 transition-colors">
                   {{ t('News') }}
                 </NuxtLink>
@@ -45,7 +45,7 @@ const { t } = useI18n()
 
         <!-- Right Column - Logos -->
         <div class="col-span-3">
-          <div class="flex flex-col md:flex-row items-start space-y-4 md:space-x-6 md:space-y-0 mb-8">
+          <div class="flex flex-col md:flex-row items-start space-y-4 md:space-x-6 md:space-y-0 mb-8 md:mt-8 mt-4 lg:mt-0">
             <NuxtImg src="/criptociudad.svg" alt="Criptociudad" width="150" height="50" />
             <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" width="150" height="50" />
             <NuxtImg src="/criptocidade.svg" alt="Criptocidade" width="150" height="50" />
