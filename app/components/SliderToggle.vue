@@ -4,15 +4,15 @@ const swap = defineModel<boolean>()
 
 <template>
   <div
-    class="inline-flex bg-neutral-500 rounded-full p-2 gap-1"
+    class="inline-flex  bg-[rgba(31,35,72,0.05)] rounded-full p-1 gap-1"
   >
     <button
       type="button"
-      class="nq-pill m-0"
+      class="nq-pill m-0 px-9 py-2 text-lg "
       :class="[
         !swap
           ? 'nq-pill-blue'
-          : 'nq-pill-secondary',
+          : 'bg-transparent text-[#1F2348]',
       ]"
       @click="swap = false"
     >
@@ -20,11 +20,11 @@ const swap = defineModel<boolean>()
     </button>
     <button
       type="button"
-      class="nq-pill m-0"
+      class="nq-pill m-0 px-12 py-2 text-lg"
       :class="[
         swap
           ? 'nq-pill-blue'
-          : 'nq-pill-secondary',
+          : 'bg-transparent text-[#1F2348]',
       ]"
       @click="swap = true"
     >
