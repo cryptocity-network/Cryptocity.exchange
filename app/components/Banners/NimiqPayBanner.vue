@@ -84,7 +84,7 @@
 
                 <!-- Store Button -->
                 <div class="flex justify-center pt-4 pb-5">
-                  <a href="https://play.google.com/store/apps/details?id=com.nimiq.pay" target="_blank"
+                  <a href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw" target="_blank"
                     rel="noopener noreferrer"><img src="/play-store.svg" alt="Download on the App Store"
                       class="w-[137px]" /></a>
 

@@ -24,7 +24,8 @@
 
         <!-- Explore Button -->
         <button class="nq-pill-blue px-8 py-2 font-bold text-xl mx-auto md:mx-0">
-          <span>Explore</span>
+          <NuxtLink to="https://map.nimiq.com/@17.750880574470294,-9.97978963055369,3z" target="_blank" rel="noopener noreferrer" > <span>Explore</span></NuxtLink>
+         
           <div class="i-lucide-arrow-right text-lg"></div>
         </button>
       </div>

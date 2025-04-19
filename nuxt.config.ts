@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/image',
+    '@nuxt/icon'
   ],
 
   // https://devtools.nuxt.com
