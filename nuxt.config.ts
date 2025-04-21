@@ -2,14 +2,14 @@
 export default defineNuxtConfig({
 
   // https://nuxt.com/modules
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/eslint',
-    '@unocss/nuxt',
-    '@nuxtjs/i18n',
-    '@nuxt/image',
-    '@nuxt/icon'
-  ],
+  modules: ['@nuxthub/core', '@nuxt/eslint', '@unocss/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@nuxt/icon', 'nuxt-og-image'],
+
+  ogImage: {
+    defaults: {
+
+      url: '/ogcard.jpg' // ✅ A custom background image
+    }
+  },
 
   // https://devtools.nuxt.com
   devtools: { enabled: true },
@@ -59,6 +59,6 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     detectBrowserLanguage: false
-    
+
   },
 })

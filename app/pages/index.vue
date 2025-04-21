@@ -1,36 +1,17 @@
 <script setup lang="ts">
-import CryptoMapBanner from '~/components/Banners/CryptoMapBanner.vue';
-import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue';
+
+import CryptoMapBanner from '~/components/Banners/CryptoMapBanner.vue'
+import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue'
 
 const swap = ref(false);
-
-definePageMeta({
+useSeoMeta({
   title: 'Buy and Sell Crypto - Cryptocity',
   description: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.',
-  ogImage: {
-    url: '/ogcard.jpg', // This refers to public/og-image.jpg
-    alt: 'Buy and sell crypto on Cryptocity',
-    width: 1200,
-    height: 630
-  },
-  meta: [
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:title',
-      content: 'Buy and Sell Crypto - Cryptocity'
-    },
-    {
-      name: 'twitter:description',
-      content: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.'
-    },
-    {
-      name: 'twitter:image',
-      content: '/ogcard.jpg' // Same image for Twitter (served from public folder)
-    }
-  ]
+})
+defineOgImageComponent('NuxtSeo', {
+  title: 'Buy and Sell Crypto - Cryptocity',
+  description: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.',
+  colorMode: 'light',
 })
 </script>
 
@@ -48,7 +29,8 @@ definePageMeta({
             <h1 class="pb-6 text-5xl/16 max-w-full md:max-w-[398px] text-wrap text-neutral px-4 md:px-0">
               Buy and Sell Crypto
             </h1>
-            <h3 class="pb-8 text-xl/8 max-w-full md:max-w-[248px] text-wrap font-semibold text-neutral opacity-60 px-4 md:px-0">
+            <h3
+              class="pb-8 text-xl/8 max-w-full md:max-w-[248px] text-wrap font-semibold text-neutral opacity-60 px-4 md:px-0">
               Buy and Sell NIM with
               Euro, USD, CHF, and more!
             </h3>
@@ -58,29 +40,30 @@ definePageMeta({
           </div>
 
           <div
-          class=" grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] font-semibold hidden md:flex">
-          <div class="col-span-1">
-            <p class="text-netural mb-2 max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
-            <!-- TODO: link from design is using gradiant blue -->
-            <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create</NuxtLink>
+            class=" grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] font-semibold hidden md:flex">
+            <div class="col-span-1">
+              <p class="text-netural mb-2 max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
+              <!-- TODO: link from design is using gradiant blue -->
+              <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">
+                Create</NuxtLink>
 
-          </div>
-          <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
-            <div class="flex flex-row space-x-2 mb-2 ">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/nimiq.svg" alt="Nimiq" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/bitcoin.svg" alt="Bitcoin" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdc.svg" alt="USDC" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdt.svg" alt="USDT" width="26"
-                height="26">
             </div>
+            <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
+              <div class="flex flex-row space-x-2 mb-2 ">
+                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/nimiq.svg" alt="Nimiq" width="26"
+                  height="26">
+                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/bitcoin.svg" alt="Bitcoin" width="26"
+                  height="26">
+                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdc.svg" alt="USDC" width="26"
+                  height="26">
+                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdt.svg" alt="USDT" width="26"
+                  height="26">
+              </div>
 
-            <span class="text-neutral uppercase text-[9px] font-bold tracking-widest ">Supported currencies</span>
+              <span class="text-neutral uppercase text-[9px] font-bold tracking-widest ">Supported currencies</span>
 
+            </div>
           </div>
-        </div>
 
         </div>
 
@@ -96,7 +79,8 @@ definePageMeta({
           <div class="col-span-1">
             <p class="text-netural mb-2  max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
             <!-- TODO: link from design is using gradiant blue -->
-            <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create</NuxtLink>
+            <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create
+            </NuxtLink>
 
           </div>
           <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
