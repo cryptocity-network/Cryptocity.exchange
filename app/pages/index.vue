@@ -4,32 +4,34 @@ import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue';
 
 const swap = ref(false);
 
-
 definePageMeta({
   title: 'Buy and Sell Crypto - Cryptocity',
+  description: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.',
+  ogImage: {
+    url: '/ogcard.jpg', // This refers to public/og-image.jpg
+    alt: 'Buy and sell crypto on Cryptocity',
+    width: 1200,
+    height: 630
+  },
   meta: [
     {
-      name: 'description',
-      content: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.'
+      name: 'twitter:card',
+      content: 'summary_large_image'
     },
     {
-      name: 'keywords',
-      content: 'Cryptocity, Buy Crypto, Sell Crypto, NIM, Bitcoin, USDC, USDT'
-    },
-    {
-      property: 'og:title',
+      name: 'twitter:title',
       content: 'Buy and Sell Crypto - Cryptocity'
     },
     {
-      property: 'og:description',
+      name: 'twitter:description',
       content: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.'
     },
     {
-      property: 'og:image',
-      content: '/ogcard.jpg'
+      name: 'twitter:image',
+      content: '/ogcard.jpg' // Same image for Twitter (served from public folder)
     }
   ]
-});
+})
 </script>
 
 <template>
