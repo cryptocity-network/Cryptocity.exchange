@@ -1,58 +1,34 @@
-# Hello Edge
+<p align="center">
+  <a href="https://github.com/cryptocity-network/Cryptocity.exchange" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cryptocity-network/Cryptocity.exchange/HEAD/.github/logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cryptocity-network/Cryptocity.exchange/HEAD/.github/logo-light.svg">
+      <img alt="Cryptocity Exchange" src="https://raw.githubusercontent.com/cryptocity-network/Cryptocity.exchange/HEAD/.github/logo-light.svg" width="350" height="70" style="max-width: 100%;">
+    </picture>
+  </a>
+</p>
 
-A minimal [Nuxt](https://nuxt.com) starter deployed on the Edge using [NuxtHub](https://hub.nuxt.com).
+<p align="center">
+Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity. 
+</p>
 
-https://hello.nuxt.dev
 
-<a href="https://hello.nuxt.dev">
-<img src="https://github.com/nuxt-hub/hello-edge/assets/904724/99d1bd54-ef7e-4ac9-83ad-0a290f85edcf" alt="Hello World template for NuxtHub" />
-</a>
+<p align="center">
 
-## Features
+[![NuxtHub](https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml/badge.svg)](https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml)
 
-- Server-Side rendering on Cloudflare Workers
-- ESLint setup
-- Ready to add a database, blob and KV storage
-- One click deploy on 275+ locations for free
+</p>
+
+<br />
+
+<br />
+
 
 ## Setup
 
-Make sure to install the dependencies with [pnpm](https://pnpm.io/installation#using-corepack):
+You need to setup the `.env` file. You can copy the `.env.example` file to `.env` and fill in the required values.
 
 ```bash
 npm install
-```
-
-You can update the main text displayed by creating a `.env`:
-
-```bash
-NUXT_PUBLIC_HELLO_TEXT="Hello my world!"
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
 npm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-## Deploy
-
-Deploy the application on the Edge with [NuxtHub](https://hub.nuxt.com) on your Cloudflare account:
-
-```bash
-npx nuxthub deploy
-```
-
-Then checkout your server logs, analaytics and more in the [NuxtHub Admin](https://admin.hub.nuxt.com).
-
-You can also deploy using [Cloudflare Pages CI](https://hub.nuxt.com/docs/getting-started/deploy#cloudflare-pages-ci).
