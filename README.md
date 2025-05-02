@@ -9,20 +9,16 @@
 </p>
 
 <p align="center">
-Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity. 
+Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.
 </p>
-
 
 <p align="center">
-
-[![NuxtHub](https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml/badge.svg)](https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml)
-
+    <a href="https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml"><img src="https://github.com/cryptocity-network/Cryptocity.exchange/actions/workflows/nuxthub.yml/badge.svg" alt="Deploy Status"></a>
 </p>
 
 <br />
 
 <br />
-
 
 ## Setup
 
