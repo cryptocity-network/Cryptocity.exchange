@@ -3,7 +3,7 @@ on: push
 
 jobs:
   deploy:
-    name: "Deploy to NuxtHub"
+    name: Deploy to NuxtHub
     runs-on: ubuntu-latest
     environment:
       name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: npm
 
       - name: Install dependencies
         run: npm install
@@ -32,6 +32,9 @@ jobs:
 
       - name: Build application
         run: npm run build
+        env:
+          NUXT_PUBLIC_COINIFY_URL: ${{ vars.NUXT_PUBLIC_COINIFY_URL }}
+          NUXT_PUBLIC_LETSEXCHANGE_URL: ${{ vars.NUXT_PUBLIC_LETSEXCHANGE_URL }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
