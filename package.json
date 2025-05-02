@@ -1,7 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "cryptocity-exchange",
   "type": "module",
   "private": true,
+  "license": "Apache-2.0",
   "packageManager": "npm@10.9.2",
   "scripts": {
     "build": "nuxt build",
