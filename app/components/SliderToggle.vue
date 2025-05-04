@@ -8,7 +8,7 @@ const swap = defineModel<boolean>()
   >
     <button
       type="button"
-      class="nq-pill m-0 px-9 py-2 text-lg "
+      class="nq-pill m-0 px-9 py-2 text-lg active:shadow-none"
       :class="[
         !swap
           ? 'nq-pill-blue'
@@ -20,7 +20,7 @@ const swap = defineModel<boolean>()
     </button>
     <button
       type="button"
-      class="nq-pill m-0 px-12 py-2 text-lg"
+      class="nq-pill m-0 px-12 py-2 text-lg active:shadow-none"
       :class="[
         swap
           ? 'nq-pill-blue'

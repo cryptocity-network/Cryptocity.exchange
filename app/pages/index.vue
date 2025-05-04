@@ -13,6 +13,10 @@ defineOgImageComponent('NuxtSeo', {
   description: 'Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Cryptocity.',
   colorMode: 'light',
 })
+
+const handleRedirect = () => {
+  window.open('https://wallet.nimiq.com/', '_blank')
+}
 </script>
 
 <template>
@@ -40,30 +44,34 @@ defineOgImageComponent('NuxtSeo', {
           </div>
 
           <div
-            class=" grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] font-semibold hidden md:flex">
+            class="hover-icons grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] font-semibold hidden md:flex cursor-pointer" @click="handleRedirect">
             <div class="col-span-1">
-              <p class="text-netural mb-2 max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
-              <!-- TODO: link from design is using gradiant blue -->
+              <p class="text-netural mb-2 max-w-[165px]">
+                {{ !swap ? 'Get your self-hosted wallet in 30 sec!' : 'Swap Your Crypto, Swap 5520+ cryptos to NIM and back!' }}
+              </p>
               <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">
-                Create</NuxtLink>
-
+                Create
+              </NuxtLink>
             </div>
-            <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
-              <div class="flex flex-row space-x-2 mb-2 ">
-                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/nimiq.svg" alt="Nimiq" width="26"
-                  height="26">
-                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/bitcoin.svg" alt="Bitcoin" width="26"
-                  height="26">
-                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdc.svg" alt="USDC" width="26"
-                  height="26">
-                <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdt.svg" alt="USDT" width="26"
-                  height="26">
+
+            <div class="col-span-1 flex flex-col items-center justify-center pl-4">
+              <div class="flex flex-row space-x-2 mb-2">
+                <img class="icon grayscale brightness-100 transition" src="/nimiq.svg" alt="Nimiq" width="26"
+                  height="26" />
+                <img class="icon grayscale brightness-100 transition" src="/bitcoin.svg" alt="Bitcoin" width="26"
+                  height="26" />
+                <img class="icon grayscale brightness-100 transition" src="/usdc.svg" alt="USDC" width="26"
+                  height="26" />
+                <img class="icon grayscale brightness-100 transition" src="/usdt.svg" alt="USDT" width="26"
+                  height="26" />
               </div>
-
-              <span class="text-neutral uppercase text-[9px] font-bold tracking-widest ">Supported currencies</span>
-
+              <span class="text-neutral uppercase text-[9px] font-bold tracking-widest pl-1">
+                Supported currencies
+              </span>
             </div>
           </div>
+
+
 
         </div>
 
@@ -75,26 +83,24 @@ defineOgImageComponent('NuxtSeo', {
 
         <!-- Component 3: Supported Currencies (Mobile Order 3 - At Bottom) -->
         <div
-          class="mt-[150px] mb-[200px] flex md:hidden grid grid-cols-2 border-2 border-gray-200 rounded-xl px-10 py-5 order-3 md:order-none max-w-full md:max-w-[398px] font-semibold">
+          class="hover-icons mt-[150px] mb-[200px] flex md:hidden grid grid-cols-2 border-2 border-gray-200 rounded-xl px-10 py-5 order-3 md:order-none max-w-full md:max-w-[398px] font-semibold cursor-pointer"  @click="handleRedirect">
           <div class="col-span-1">
-            <p class="text-netural mb-2  max-w-[155px] ">Get your self-hosted wallet in 30 sec!</p>
+            <p class="text-netural mb-2  max-w-[165px] "> {{ !swap ? 'Get your self-hosted wallet in 30 sec!' : 'Swap Your Crypto, Swap 5520 + cryptos to NIM and back!' }}</p>
             <!-- TODO: link from design is using gradiant blue -->
             <NuxtLink to="https://wallet.nimiq.com/" target="_blank" rel="noopener noreferrer" class="text-blue">Create
             </NuxtLink>
 
           </div>
-          <div class="col-span-1 flex flex-col items-center justify-center pl-10 ">
+          <div class="col-span-1 flex flex-col items-center justify-center pl-4 ">
             <div class="flex flex-row space-x-2 mb-2 ">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/nimiq.svg" alt="Nimiq" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/bitcoin.svg" alt="Bitcoin" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdc.svg" alt="USDC" width="26"
-                height="26">
-              <img :class="swap ? '' : 'filter grayscale brightness-100'" src="/usdt.svg" alt="USDT" width="26"
-                height="26">
+              <img class="icon md:grayscale md:brightness-100 transition" src="/nimiq.svg" alt="Nimiq" width="26"
+                height="26" />
+              <img class="icon md:grayscale md:brightness-100 transition" src="/bitcoin.svg" alt="Bitcoin" width="26"
+                height="26" />
+              <img class="icon md:grayscale md:brightness-100 transition" src="/usdc.svg" alt="USDC" width="26" height="26" />
+              <img class="icon md:grayscale md:brightness-100 transition" src="/usdt.svg" alt="USDT" width="26" height="26" />
             </div>
-            <span class="text-neutral uppercase text-[9px] font-bold tracking-widest ">Supported currencies</span>
+            <span class="text-neutral uppercase text-[9px] font-bold tracking-widest pl-1">Supported currencies</span>
 
           </div>
         </div>
@@ -105,3 +111,9 @@ defineOgImageComponent('NuxtSeo', {
     </div>
   </section>
 </template>
+
+<style lang="css" scoped>
+.hover-icons:hover .icon {
+  filter: none;
+}
+</style>
