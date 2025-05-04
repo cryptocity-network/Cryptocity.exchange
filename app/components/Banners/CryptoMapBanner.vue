@@ -1,5 +1,6 @@
 <template>
-  <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10 md:mt-30 mx-4 md:mx-0">
+  <section
+    class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-contain bg-right bg-crypto-map mb-10 md:mt-30 mx-4 md:mx-0">
     <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-[#1F2348] via-[#1F2348]/100 to-transparent">
     </div>
@@ -23,9 +24,9 @@
         </p>
 
         <!-- Explore Button -->
-        <button class="nq-pill-blue px-8 py-2 font-bold text-xl mx-auto md:mx-0">
-          <NuxtLink to="https://map.nimiq.com/@17.750880574470294,-9.97978963055369,3z" target="_blank" rel="noopener noreferrer" > <span>Explore</span></NuxtLink>
-         
+        <button class="nq-pill-blue px-8 py-2 font-bold text-xl mx-auto md:mx-0 flex items-center gap-2"
+          @click="openLink">
+          <span>Explore</span>
           <div class="i-lucide-arrow-right text-lg"></div>
         </button>
       </div>
@@ -35,7 +36,9 @@
 </template>
 
 <script setup lang="ts">
-// Component logic can be added here if needed
+const openLink = () => {
+  window.open('https://map.nimiq.com/@17.750880574470294,-9.97978963055369,3z', '_blank')
+}
 </script>
 
 <style>

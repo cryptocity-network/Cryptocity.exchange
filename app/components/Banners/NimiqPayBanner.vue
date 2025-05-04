@@ -1,6 +1,5 @@
 <template>
   <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-nimiqpay mx-4 md:mx-0">
-
     <!-- Content Overlay -->
     <div class="grid md:grid-cols-2 grid-cols-1 relative z-10 h-full justify-center p-8 max-w-full">
       <div class="md:col-span-1 flex flex-col justify-center md:pl-14 md:text-left text-center">
@@ -13,103 +12,124 @@
 
         <!-- App Store Buttons -->
         <div class="flex space-x-4 justify-center md:justify-start">
-          <BasicModalComponent>
+          <!-- App Store Button -->
+          <BasicModalComponent v-if="!isMobile">
             <template #trigger>
-
-              <img src="/appstore.svg" alt="Download on the App Store" class="h-10" />
-
+              <img
+                src="/appstore.svg"
+                alt="Download on the App Store"
+                class="h-10 cursor-pointer"
+                @click="handleRedirect('appstore')"
+              />
             </template>
-
             <template #content>
-              <!-- Modal Content -->
               <div class="relative bg-white rounded-3xl py-3 max-w-md w-full text-center">
-
-
-                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
-                  Download Nimiq Pay
-                </h3>
-                <p class="text-gray-600 mb-6 font-semibold text-lg">
-                  Scan the QR Code
-                </p>
-
-                <!-- QR Code -->
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">Download Nimiq Pay</h3>
+                <p class="text-gray-600 mb-6 font-semibold text-lg">Scan the QR Code</p>
                 <div class="flex justify-center mb-6">
                   <div class="background-white shadow-lg rounded-lg p-2">
                     <img src="/appstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
                   </div>
-
                 </div>
-
-                <!-- Store Button -->
                 <div class="flex justify-center pt-4 pb-[18px]">
-                  <a href="https://apps.apple.com/us/app/nimiq-pay/id6471844738" target="_blank"
-                    rel="noopener noreferrer"><img src="/appstore.svg" alt="Download on the App Store"
-                      class="w-[137px]" /></a>
-
+                  <a
+                    href="https://apps.apple.com/us/app/nimiq-pay/id6471844738"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/appstore.svg" alt="Download on the App Store" class="w-[137px]" />
+                  </a>
                 </div>
-
-
               </div>
             </template>
           </BasicModalComponent>
+          <a
+            v-else
+            href="https://apps.apple.com/us/app/nimiq-pay/id6471844738"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/appstore.svg" alt="Download on the App Store" class="h-10" />
+          </a>
 
-
-
-          <BasicModalComponent>
+          <!-- Google Play Button -->
+          <BasicModalComponent v-if="!isMobile">
             <template #trigger>
-
-              <img src="/play-store.svg" alt="Download on the App Store" class="h-10" />
-
+              <img
+                src="/play-store.svg"
+                alt="Download on Google Play"
+                class="h-10 cursor-pointer"
+                @click="handleRedirect('googleplay')"
+              />
             </template>
-
             <template #content>
-              <!-- Modal Content -->
               <div class="relative bg-white rounded-3xl py-3 max-w-md w-full text-center">
-
-
-                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
-                  Download Nimiq Pay
-                </h3>
-                <p class="text-gray-600 mb-6 font-semibold text-lg">
-                  Scan the QR Code
-                </p>
-
-                <!-- QR Code -->
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">Download Nimiq Pay</h3>
+                <p class="text-gray-600 mb-6 font-semibold text-lg">Scan the QR Code</p>
                 <div class="flex justify-center mb-6">
                   <div class="background-white shadow-lg rounded-lg p-2">
                     <img src="/playstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
                   </div>
-
                 </div>
-
-                <!-- Store Button -->
                 <div class="flex justify-center pt-4 pb-5">
-                  <a href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw" target="_blank"
-                    rel="noopener noreferrer"><img src="/play-store.svg" alt="Download on the App Store"
-                      class="w-[137px]" /></a>
-
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/play-store.svg" alt="Download on Google Play" class="w-[137px]" />
+                  </a>
                 </div>
-
-
               </div>
             </template>
           </BasicModalComponent>
-
-
-          
-
+          <a
+            v-else
+            href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/play-store.svg" alt="Download on Google Play" class="h-10" />
+          </a>
         </div>
       </div>
       <div class="md:col-span-1 flex justify-bottom">
         <img src="/bg-nimiqpay-phone.svg" alt="nimiqpay" class="nimiqpay-phone" />
       </div>
     </div>
-
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue';
 
+const isMobile = ref(false);
+
+onMounted(() => {
+  // Check screen width on mount
+  isMobile.value = window.innerWidth <= 768;
+
+  // Add a resize event listener to update `isMobile` dynamically
+  const handleResize = () => {
+    isMobile.value = window.innerWidth <= 768;
+  };
+  window.addEventListener('resize', handleResize);
+
+  // Cleanup event listener on unmount
+  onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
+  });
+});
+
+const handleRedirect = (store: 'appstore' | 'googleplay') => {
+  if (isMobile.value) {
+    if (store === 'appstore') {
+      window.open('https://apps.apple.com/us/app/nimiq-pay/id6471844738', '_blank');
+    } else if (store === 'googleplay') {
+      window.open('https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw', '_blank');
+    }
+  }
+};
 </script>
 
 <style>
