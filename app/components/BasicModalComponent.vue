@@ -32,7 +32,7 @@ const open = defineModel<boolean>('open')
             </div>
 
             <DialogClose aria-label="Close" as-child absolute right-2 top-2 w-10 h-10 cursor-pointer>
-              <img src="/close.svg" alt="close">
+              <NuxtImg src="/close.svg" alt="close" />
             </DialogClose>
           </div>
         </DialogContent>

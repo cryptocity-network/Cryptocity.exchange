@@ -52,22 +52,22 @@ defineOgImageComponent('NuxtSeo', {
 
             <div class="col-span-1 flex flex-col items-center justify-center pl-4">
               <div class="flex flex-row space-x-2 mb-2">
-                <img
+                <NuxtImg
                   class="icon grayscale brightness-100 transition" src="/nimiq.svg" alt="Nimiq" width="26"
                   height="26"
-                >
-                <img
+                />
+                <NuxtImg
                   class="icon grayscale brightness-100 transition" src="/bitcoin.svg" alt="Bitcoin" width="26"
                   height="26"
-                >
-                <img
+                />
+                <NuxtImg
                   class="icon grayscale brightness-100 transition" src="/usdc.svg" alt="USDC" width="26"
                   height="26"
-                >
-                <img
+                />
+                <NuxtImg
                   class="icon grayscale brightness-100 transition" src="/usdt.svg" alt="USDT" width="26"
                   height="26"
-                >
+                />
               </div>
               <span class="text-neutral uppercase text-[9px] font-bold tracking-widest pl-1">
                 Supported currencies
@@ -98,16 +98,16 @@ defineOgImageComponent('NuxtSeo', {
           </div>
           <div class="col-span-1 flex flex-col items-center justify-center pl-4 ">
             <div class="flex flex-row space-x-2 mb-2 ">
-              <img
+              <NuxtImg
                 class="icon md:grayscale md:brightness-100 transition" src="/nimiq.svg" alt="Nimiq" width="26"
                 height="26"
-              >
-              <img
+              />
+              <NuxtImg
                 class="icon md:grayscale md:brightness-100 transition" src="/bitcoin.svg" alt="Bitcoin" width="26"
                 height="26"
-              >
-              <img class="icon md:grayscale md:brightness-100 transition" src="/usdc.svg" alt="USDC" width="26" height="26">
-              <img class="icon md:grayscale md:brightness-100 transition" src="/usdt.svg" alt="USDT" width="26" height="26">
+              />
+              <NuxtImg class="icon md:grayscale md:brightness-100 transition" src="/usdc.svg" alt="USDC" width="26" height="26" />
+              <NuxtImg class="icon md:grayscale md:brightness-100 transition" src="/usdt.svg" alt="USDT" width="26" height="26" />
             </div>
             <span class="text-neutral uppercase text-[9px] font-bold tracking-widest pl-1">Supported currencies</span>
           </div>

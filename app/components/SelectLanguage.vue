@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
       <!-- Conditionally show the flag icon based on the `showFlag` prop -->
       <div :class="getCurrentFlagIcon()" class="w-6 h-4" />
       <span v-if="showFlag" class="text-sm font-medium">{{ getCurrentLanguageName() }}</span>
-      <div class="i-lucide-chevron-down w-4 h-4" />
+      <div class="i-nimiq:chevron-down size-3" />
     </button>
 
     <div

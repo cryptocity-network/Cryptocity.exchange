@@ -11,7 +11,7 @@
       <div class="md:pl-14">
         <div class="mb-6">
           <div class="w-12 h-12 flex items-center justify-center mx-auto md:mx-0">
-            <img src="/icon-cryptomap.svg" alt="Download on the App Store" class="h-12">
+            <NuxtImg src="/icon-cryptomap.svg" alt="Download on the App Store" class="h-12" />
           </div>
         </div>
 
@@ -24,9 +24,8 @@
         </p>
 
         <!-- Explore Button -->
-        <NuxtLink to="https://map.nimiq.com/@17.750880574470294,-9.97978963055369,3z" external target="_blank" class="nq-pill-blue px-8 py-2 font-bold text-xl mx-auto md:mx-0 flex items-center gap-2">
-          <span>Explore</span>
-          <div class="i-lucide-arrow-right text-lg" />
+        <NuxtLink to="https://map.nimiq.com/@17.750880574470294,-9.97978963055369,3z" external target="_blank" class="nq-pill-blue px-8 py-2 font-bold text-xl mx-auto md:mx-0 flex items-center gap-2 nq-arrow">
+          Explore
         </NuxtLink>
       </div>
     </div>
