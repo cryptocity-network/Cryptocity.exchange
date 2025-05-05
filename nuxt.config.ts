@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   ogImage: {
     defaults: {
 
-      url: '/ogcard.jpg' // ✅ A custom background image
-    }
+      url: '/ogcard.jpg', // ✅ A custom background image
+    },
   },
 
   // https://devtools.nuxt.com
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: 'en',
-    detectBrowserLanguage: false
+    detectBrowserLanguage: false,
 
   },
 })

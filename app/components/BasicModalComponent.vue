@@ -5,38 +5,40 @@ const open = defineModel<boolean>('open')
 </script>
 
 <template>
-    <DialogRoot v-model:open="open">
-        <DialogTrigger v-bind="$attrs" class="bg-transparent">
-            <slot name="trigger" />
-        </DialogTrigger>
-        <DialogPortal>
-            <Transition name="backdrop">
-                <DialogOverlay fixed inset-0 z-200 bg-darkblue op-60 />
-            </Transition>
-            <Transition name="modal">
-                <DialogContent class="top-1/2 left-1/2 translate--1/2 w-[440px] h-[409px]" rounded="4" data-modal fixed
-                    bottom-0 z-200 transform of-y-auto shadow-lg outline-none
-                    @open-auto-focus.prevent>
-                    <div relative bg-neutral-0 ring="1.5 neutral/3" class="modal-container py-4">
-                        <DialogTitle text="24 center neutral lh-24" px-4 mb-4 font-bold lh-none as="h2">
-                            <slot name="title" />
-                        </DialogTitle>
-                        <DialogDescription text="center neutral" class="px-4 block"  >
-                            <slot name="description" />
-                        </DialogDescription>
+  <DialogRoot v-model:open="open">
+    <DialogTrigger v-bind="$attrs" class="bg-transparent">
+      <slot name="trigger" />
+    </DialogTrigger>
+    <DialogPortal>
+      <Transition name="backdrop">
+        <DialogOverlay fixed inset-0 z-200 bg-darkblue op-60 />
+      </Transition>
+      <Transition name="modal">
+        <DialogContent
+          class="top-1/2 left-1/2 translate--1/2 w-[440px] h-[409px]" rounded="4" data-modal fixed
+          bottom-0 z-200 transform of-y-auto shadow-lg outline-none
+          @open-auto-focus.prevent
+        >
+          <div relative bg-neutral-0 ring="1.5 neutral/3" class="modal-container py-4">
+            <DialogTitle text="24 center neutral lh-24" px-4 mb-4 font-bold lh-none as="h2">
+              <slot name="title" />
+            </DialogTitle>
+            <DialogDescription text="center neutral" class="px-4 block">
+              <slot name="description" />
+            </DialogDescription>
 
-                        <div>
-                            <slot name="content" />
-                        </div>
+            <div>
+              <slot name="content" />
+            </div>
 
-                        <DialogClose aria-label="Close" asChild absolute right-2 top-2 w-10 h-10 cursor-pointer >
-                            <img src="/close.svg" alt="close">
-                        </DialogClose>
-                    </div>
-                </DialogContent>
-            </Transition>
-        </DialogPortal>
-    </DialogRoot>
+            <DialogClose aria-label="Close" as-child absolute right-2 top-2 w-10 h-10 cursor-pointer>
+              <img src="/close.svg" alt="close">
+            </DialogClose>
+          </div>
+        </DialogContent>
+      </Transition>
+    </DialogPortal>
+  </DialogRoot>
 </template>
 
 <style scoped>

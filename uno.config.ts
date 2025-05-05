@@ -1,4 +1,3 @@
-import { presetRemToPx } from '@unocss/preset-rem-to-px'
 import transformerDirectives from '@unocss/transformer-directives'
 import { presetNimiq } from 'nimiq-css'
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
