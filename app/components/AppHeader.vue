@@ -15,7 +15,6 @@ const { t } = useI18n()
       <!-- Right Section -->
       <nav class="flex items-center h-full">
         <NuxtLink to="https://cryptocity.network" class="font-bold pr-8 hidden md:block">
-          <!-- {{ t('Home') }} -->
           {{ t('LearnMore') }}
         </NuxtLink>
         <SelectLanguage :show-flag="false" />
