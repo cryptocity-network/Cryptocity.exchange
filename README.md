@@ -25,6 +25,6 @@ Buy and sell NIM, Bitcoin, USDC, and USDT with Euro, USD, CHF, and more on Crypt
 You need to setup the `.env` file. You can copy the `.env.example` file to `.env` and fill in the required values.
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```

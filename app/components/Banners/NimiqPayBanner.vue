@@ -107,7 +107,7 @@ const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.nimiq.
 
 <style>
 .bg-nimiqpay {
-  background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
+  background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743a3 0%, #2398dc 100%);
   background-size: cover;
   background-position: center;
 }
@@ -126,11 +126,12 @@ const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.nimiq.
   right: 50px;
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+}
 
 @media screen and (max-width: 768px) {
   .bg-nimiqpay {
-    background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
+    background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743a3 0%, #2398dc 100%);
     background-size: cover;
     background-position: right 0px bottom 0px;
   }

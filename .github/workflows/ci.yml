@@ -8,17 +8,21 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    environment: preview-testnet
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      url: ${{ steps.deploy-testnet.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v4
         with:
           run_install: false
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: npm
+          cache: pnpm
 
-      - run: npm i -g @antfu/ni
+      - run: pnpm i -g @antfu/ni
       - run: nci
 
       - name: Lint
