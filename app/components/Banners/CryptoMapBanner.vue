@@ -41,10 +41,8 @@
 
 @media screen and (max-width: 768px) {
   .bg-crypto-map {
-
     background-size: cover;
     background-position: bottom;
   }
-
 }
 </style>
