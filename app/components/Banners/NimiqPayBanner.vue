@@ -124,12 +124,12 @@ onMounted(() => {
 const handleRedirect = (store: 'appstore' | 'googleplay') => {
   if (isMobile.value) {
     if (store === 'appstore') {
-      window.open('https://apps.apple.com/us/app/nimiq-pay/id6471844738', '_blank');
+      window.open('https://apps.apple.com/us/app/nimiq-pay/id6471844738', '_blank')
     } else if (store === 'googleplay') {
-      window.open('https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw', '_blank');
+      window.open('https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw', '_blank')
     }
   }
-};
+}
 </script>
 
 <style>

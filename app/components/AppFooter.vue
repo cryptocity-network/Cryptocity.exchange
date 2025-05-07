@@ -57,6 +57,9 @@ const { t } = useI18n()
             <NuxtLink to="https://cryptocity.network" target="_blank" rel="noopener noreferrer" class="w-[152px] h-[30px]">
               <NuxtImg src="/criptocidade.svg" alt="Criptocidade" width="152" height="50" />
             </NuxtLink>
+            <NuxtLink to="https://cryptocity.network" target="_blank" rel="noopener noreferrer" class="w-[152px] h-[30px]">
+              <NuxtImg src="/criptociudad.svg" alt="criptociudad" width="155" height="55" />
+            </NuxtLink>
           </div>
 
           <div>
@@ -136,8 +139,12 @@ const { t } = useI18n()
             {{ t('PrivacyPolicy') }}
           </NuxtLink>
 
-          <NuxtLink to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer" class="pl-2">
+          <NuxtLink to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer" class="pl-2 pr-2 border-r border-gray-300" >
             {{ t('CookieUsage') }}
+          </NuxtLink>
+
+          <NuxtLink to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer" class="pl-2">
+            {{ t('TermOfService') }}
           </NuxtLink>
         </div>
       </div>
