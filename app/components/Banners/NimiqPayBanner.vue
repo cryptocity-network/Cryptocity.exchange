@@ -105,7 +105,6 @@ const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.nimiq.
   </section>
 </template>
 
-
 <style>
 .bg-nimiqpay {
   background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743a3 0%, #2398dc 100%);

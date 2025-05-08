@@ -2,8 +2,8 @@
 import CryptoMapBanner from '~/components/Banners/CryptoMapBanner.vue'
 import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue'
 
-const swap = ref(false);
-const widgetRef = ref<HTMLElement | null>(null);
+const swap = ref(false)
+const widgetRef = ref<HTMLElement | null>(null)
 
 useSeoMeta({
   title: 'Buy and Sell Crypto - Cryptocity',
@@ -15,14 +15,13 @@ defineOgImageComponent('NuxtSeo', {
   colorMode: 'light',
 })
 
-const handleRedirect = () => {
+function handleRedirect() {
   window.open('https://wallet.nimiq.com/', '_blank')
 }
 
-const scrollToWidget = () => {
-  widgetRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-};
-
+function scrollToWidget() {
+  widgetRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
 </script>
 
 <template>
@@ -35,12 +34,12 @@ const scrollToWidget = () => {
           <!-- Component 1: Title & Text (Mobile Order 1) -->
           <div class="space-y-1 mb-3 order-1 md:order-none text-center md:text-left ">
             <h1 class="pb-6 text-5xl/16 max-w-full md:max-w-[398px] text-wrap text-neutral px-4 md:px-0">
-             {{ !swap?' Buy and Sell Crypto' :'Swap Your Crypto' }}
+              {{ !swap ? ' Buy and Sell Crypto' : 'Swap Your Crypto' }}
             </h1>
             <h3
               class="pb-8 text-xl/8 max-w-full md:max-w-[248px] text-wrap font-semibold text-neutral opacity-60 px-4 md:px-0"
             >
-            {{ !swap ? 'Buy and Sell NIM with Euro, USD, CHF, and more!' : 'Swap Your Crypto, Swap 5520+ cryptos to NIM and back!' }}
+              {{ !swap ? 'Buy and Sell NIM with Euro, USD, CHF, and more!' : 'Swap Your Crypto, Swap 5520+ cryptos to NIM and back!' }}
             </h3>
             <div class="pb-20" @click="scrollToWidget">
               <SliderToggle v-model="swap" />
@@ -48,7 +47,8 @@ const scrollToWidget = () => {
           </div>
 
           <div
-            class="hover-icons grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] h-[126px] font-semibold hidden md:flex cursor-pointer">
+            class="hover-icons grid grid-cols-2 border-2 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] h-[126px] font-semibold hidden md:flex cursor-pointer"
+          >
             <div class="col-span-1">
               <p class="text-netural mb-3 max-w-[165px]">
                 Get your self-hosted wallet in 30 sec!
@@ -60,7 +60,7 @@ const scrollToWidget = () => {
 
               <button class="nq-pill-blue crypto-map-desktop px-3 py-1 text-md mx-auto md:mx-0 flex items-center gap-1 " @click="handleRedirect">
                 <span>Create</span>
-                <div class="i-lucide-arrow-right text-lg"></div>
+                <div class="i-lucide-arrow-right text-lg" />
               </button>
             </div>
 
@@ -91,7 +91,7 @@ const scrollToWidget = () => {
         </div>
 
         <!-- Right Column: Widget (Mobile Order 2) -->
-        <div class="flex justify-center order-2 md:col-span-1 md:order-none" ref="widgetRef"> 
+        <div ref="widgetRef" class="flex justify-center order-2 md:col-span-1 md:order-none">
           <CoinifyWidget v-if="!swap" />
           <LetsexchangeWidget v-else />
         </div>
