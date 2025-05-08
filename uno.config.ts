@@ -1,4 +1,3 @@
-import { presetRemToPx } from '@unocss/preset-rem-to-px'
 import transformerDirectives from '@unocss/transformer-directives'
 import { presetNimiq } from 'nimiq-css'
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
@@ -11,14 +10,12 @@ export default defineConfig({
       attributifyUtilities: true,
     }),
     presetAttributify(),
+    // Nimiq icons: https://onmax.github.io/nimiq-ui/nimiq-icons/explorer.html
     presetIcons(),
   ],
   preflights: [
     {
-      getCSS: () => `
-        body { background-color: #F8F8F8; }
-   
-      `,
+      getCSS: () => `body { background-color: #F8F8F8; }`,
     },
   ],
   theme: {

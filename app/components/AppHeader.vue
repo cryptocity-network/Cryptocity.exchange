@@ -18,7 +18,7 @@ const { t } = useI18n()
           <!-- {{ t('Home') }} -->
           {{ t('LearnMore') }}
         </NuxtLink>
-        <SelectLanguage :showFlag="false"/>
+        <SelectLanguage :show-flag="false" />
       </nav>
     </div>
   </header>

@@ -1,3 +1,28 @@
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+
+const isMobile = ref(false)
+
+onMounted(() => {
+  // Check screen width on mount
+  isMobile.value = window.innerWidth <= 768
+
+  // Add a resize event listener to update `isMobile` dynamically
+  const handleResize = () => {
+    isMobile.value = window.innerWidth <= 768
+  }
+  window.addEventListener('resize', handleResize)
+
+  // Cleanup event listener on unmount
+  onUnmounted(() => {
+    window.removeEventListener('resize', handleResize)
+  })
+})
+
+const appStoreLink = 'https://apps.apple.com/us/app/nimiq-pay/id6471844738'
+const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw'
+</script>
+
 <template>
   <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-nimiqpay mx-4 md:mx-0">
     <!-- Content Overlay -->
@@ -15,126 +40,75 @@
           <!-- App Store Button -->
           <BasicModalComponent v-if="!isMobile">
             <template #trigger>
-              <img
-                src="/appstore.svg"
-                alt="Download on the App Store"
-                class="h-10 cursor-pointer"
-                @click="handleRedirect('appstore')"
-              />
+              <NuxtImg src="/appstore.svg" alt="Download on the App Store" class="h-10 cursor-pointer" />
             </template>
             <template #content>
               <div class="relative bg-white rounded-3xl py-3 max-w-md w-full text-center">
-                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">Download Nimiq Pay</h3>
-                <p class="text-gray-600 mb-6 font-semibold text-lg">Scan the QR Code</p>
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
+                  Download Nimiq Pay
+                </h3>
+                <p class="text-gray-600 mb-6 font-semibold text-lg">
+                  Scan the QR Code
+                </p>
                 <div class="flex justify-center mb-6">
                   <div class="background-white shadow-lg rounded-lg p-2">
-                    <img src="/appstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
+                    <NuxtImg src="/appstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
                   </div>
                 </div>
                 <div class="flex justify-center pt-4 pb-[18px]">
-                  <a
-                    href="https://apps.apple.com/us/app/nimiq-pay/id6471844738"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="/appstore.svg" alt="Download on the App Store" class="w-[137px]" />
-                  </a>
+                  <NuxtLink :to="appStoreLink" external target="_blank">
+                    <NuxtImg src="/appstore.svg" alt="Download on the App Store" class="w-[137px]" />
+                  </NuxtLink>
                 </div>
               </div>
             </template>
           </BasicModalComponent>
-          <a
-            v-else
-            href="https://apps.apple.com/us/app/nimiq-pay/id6471844738"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/appstore.svg" alt="Download on the App Store" class="h-10" />
-          </a>
+          <NuxtLink v-else :to="appStoreLink" external target="_blank">
+            <NuxtImg src="/appstore.svg" alt="Download on the App Store" class="h-10" />
+          </NuxtLink>
 
           <!-- Google Play Button -->
           <BasicModalComponent v-if="!isMobile">
             <template #trigger>
-              <img
-                src="/play-store.svg"
-                alt="Download on Google Play"
-                class="h-10 cursor-pointer"
-                @click="handleRedirect('googleplay')"
-              />
+              <NuxtImg src="/play-store.svg" alt="Download on Google Play" class="h-10 cursor-pointer" />
             </template>
             <template #content>
               <div class="relative bg-white rounded-3xl py-3 max-w-md w-full text-center">
-                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">Download Nimiq Pay</h3>
-                <p class="text-gray-600 mb-6 font-semibold text-lg">Scan the QR Code</p>
+                <h3 class="text-3xl font-bold text-[#1F2348] mb-2">
+                  Download Nimiq Pay
+                </h3>
+                <p class="text-gray-600 mb-6 font-semibold text-lg">
+                  Scan the QR Code
+                </p>
                 <div class="flex justify-center mb-6">
                   <div class="background-white shadow-lg rounded-lg p-2">
-                    <img src="/playstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
+                    <NuxtImg src="/playstore-qrcode.svg" alt="QR Code" class="w-[125px] h-[125px]" />
                   </div>
                 </div>
                 <div class="flex justify-center pt-4 pb-5">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="/play-store.svg" alt="Download on Google Play" class="w-[137px]" />
-                  </a>
+                  <NuxtLink :to="googlePlayLink" external target="_blank">
+                    <NuxtImg src="/play-store.svg" alt="Download on Google Play" class="w-[137px]" />
+                  </NuxtLink>
                 </div>
               </div>
             </template>
           </BasicModalComponent>
-          <a
-            v-else
-            href="https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/play-store.svg" alt="Download on Google Play" class="h-10" />
-          </a>
+          <NuxtLink v-else :to="googlePlayLink" external target="_blank">
+            <NuxtImg src="/play-store.svg" alt="Download on Google Play" class="h-10" />
+          </NuxtLink>
         </div>
       </div>
       <div class="md:col-span-1 flex justify-bottom">
-        <img src="/bg-nimiqpay-phone.svg" alt="nimiqpay" class="nimiqpay-phone" />
+        <NuxtImg src="/bg-nimiqpay-phone.svg" alt="nimiqpay" class="nimiqpay-phone" />
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-
-const isMobile = ref(false);
-
-onMounted(() => {
-  // Check screen width on mount
-  isMobile.value = window.innerWidth <= 768;
-
-  // Add a resize event listener to update `isMobile` dynamically
-  const handleResize = () => {
-    isMobile.value = window.innerWidth <= 768;
-  };
-  window.addEventListener('resize', handleResize);
-
-  // Cleanup event listener on unmount
-  onUnmounted(() => {
-    window.removeEventListener('resize', handleResize);
-  });
-});
-
-const handleRedirect = (store: 'appstore' | 'googleplay') => {
-  if (isMobile.value) {
-    if (store === 'appstore') {
-      window.open('https://apps.apple.com/us/app/nimiq-pay/id6471844738', '_blank')
-    } else if (store === 'googleplay') {
-      window.open('https://play.google.com/store/apps/details?id=com.nimiq.pay&hl=gsw', '_blank')
-    }
-  }
-}
-</script>
 
 <style>
 .bg-nimiqpay {
-  background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
+  background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743a3 0%, #2398dc 100%);
   background-size: cover;
   background-position: center;
 }
@@ -153,11 +127,12 @@ const handleRedirect = (store: 'appstore' | 'googleplay') => {
   right: 50px;
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+}
 
 @media screen and (max-width: 768px) {
   .bg-nimiqpay {
-    background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743A3 0%, #2398DC 100%);
+    background-image: url('/bg-nimiqpay.svg'), radial-gradient(circle, #1743a3 0%, #2398dc 100%);
     background-size: cover;
     background-position: right 0px bottom 0px;
   }
