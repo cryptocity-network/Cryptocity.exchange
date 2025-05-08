@@ -54,11 +54,23 @@ const { t } = useI18n()
             <NuxtLink to="https://cryptocity.network" target="_blank" rel="noopener noreferrer" class="w-[145px] h-[30px]">
               <NuxtImg src="/cryptocity.svg" alt="Criptociudad" width="145" height="50" />
             </NuxtLink>
-            <NuxtLink to="https://cryptocity.network" target="_blank" rel="noopener noreferrer" class="w-[150px] h-[30px]">
+            <NuxtLink
+              to="https://cryptocity.network" target="_blank" rel="noopener noreferrer"
+              class="w-[150px] h-[30px]"
+            >
               <NuxtImg src="/kryptostadt.svg" alt="Kryptostadt" width="150" height="50" />
             </NuxtLink>
-            <NuxtLink to="https://cryptocity.network" target="_blank" rel="noopener noreferrer" class="w-[152px] h-[30px]">
+            <NuxtLink
+              to="https://cryptocity.network" target="_blank" rel="noopener noreferrer"
+              class="w-[152px] h-[30px]"
+            >
               <NuxtImg src="/criptocidade.svg" alt="Criptocidade" width="152" height="50" />
+            </NuxtLink>
+            <NuxtLink
+              to="https://cryptocity.network" target="_blank" rel="noopener noreferrer"
+              class="w-[152px] h-[30px]"
+            >
+              <NuxtImg src="/criptociudad.svg" alt="criptociudad" width="155" height="55" />
             </NuxtLink>
           </div>
 
@@ -147,13 +159,20 @@ const { t } = useI18n()
         </div>
 
         <div class="col-span-3 flex-wrap flex items-center  mt-4 md:mt-0">
-          <NuxtLink to="#" class="pl-0 pr-2 border-r border-gray-300">
+          <a href="/privacy-policy.pdf" download target="_blank" class="pl-0 pr-2 border-r border-gray-300">
             {{ t('PrivacyPolicy') }}
-          </NuxtLink>
+          </a>
 
-          <NuxtLink to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer" class="pl-2">
+          <NuxtLink
+            to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer"
+            class="pl-2 pr-2 border-r border-gray-300"
+          >
             {{ t('CookieUsage') }}
           </NuxtLink>
+
+          <a href="/terms-of-service.pdf" download class="pl-2" target="_blank">
+            {{ t('TermOfService') }}
+          </a>
         </div>
       </div>
     </div>
