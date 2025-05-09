@@ -159,9 +159,9 @@ const { t } = useI18n()
         </div>
 
         <div class="col-span-3 flex-wrap flex items-center  mt-4 md:mt-0">
-          <a href="/privacy-policy.pdf" download target="_blank" class="pl-0 pr-2 border-r border-gray-300">
+          <NuxtLink href="/privacy-policy.pdf" target="_blank" class="pl-0 pr-2 border-r border-gray-300">
             {{ t('PrivacyPolicy') }}
-          </a>
+          </NuxtLink>
 
           <NuxtLink
             to="https://cryptocity.africa/en/cookies" target="_blank" rel="noopener noreferrer"
@@ -170,9 +170,9 @@ const { t } = useI18n()
             {{ t('CookieUsage') }}
           </NuxtLink>
 
-          <a href="/terms-of-service.pdf" download class="pl-2" target="_blank">
+          <NuxtLink href="/terms-of-service.pdf" target="_blank" class="pl-2">
             {{ t('TermOfService') }}
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
