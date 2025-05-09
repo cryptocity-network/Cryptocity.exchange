@@ -77,7 +77,7 @@ const { t } = useI18n()
           <div>
             <div class="flex flex-col md:pt-8">
               <div class="mb-4 mt-4 md:mt-0 text-md font-bold text-blue-dark/60">
-                Join our Social Channels!
+                {{ t('JoinSocialChannels') }}
               </div>
               <ul class="flex gap-4 md:gap-8">
                 <li>
@@ -154,7 +154,7 @@ const { t } = useI18n()
       <div class="grid grid-cols-1 md:grid-cols-4">
         <div class="col-span-1 relative top-[-5px]">
           <p class="mt-4">
-            © Cryptocity Association 2023
+            {{ t('Copyright') }}
           </p>
         </div>
 
