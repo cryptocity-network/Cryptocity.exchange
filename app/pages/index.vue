@@ -42,7 +42,7 @@ function scrollToWidget() {
       <!-- Wallet CTA -->
       <div
         data-section="wallet"
-        class="group flex border-2 max-md:mx-3 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] h-[126px] font-semibold hidden"
+        class="group flex border-2 max-md:mx-3 border-gray-200 rounded-xl px-8 py-5 max-w-full md:max-w-[398px] h-max font-semibold hidden"
       >
         <div class="flex flex-col gap-y-3">
           <p class="text-neutral max-w-[165px]">
