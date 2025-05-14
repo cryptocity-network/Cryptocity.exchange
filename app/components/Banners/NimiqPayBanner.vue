@@ -24,7 +24,7 @@ const googlePlayLink = 'https://play.google.com/store/apps/details?id=com.nimiq.
 </script>
 
 <template>
-  <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-nimiqpay mx-4 md:mx-0">
+  <section class="relative h-[480px] md:h-[322px] rounded-xl overflow-hidden bg-nimiqpay mx-4 md:mx-0 md:mx-auto max-w-1048px">
     <!-- Content Overlay -->
     <div class="grid md:grid-cols-2 grid-cols-1 relative z-10 h-full justify-center p-8 max-w-full">
       <div class="md:col-span-1 flex flex-col justify-center md:pl-14 md:text-left text-center">
