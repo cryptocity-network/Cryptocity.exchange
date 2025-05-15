@@ -24,6 +24,8 @@ const languages: { code: 'en' | 'de' | 'es', name: string, icon: string }[] = [
 function selectLanguage(code: 'en' | 'de' | 'es') {
   isOpen.value = false
   locale.value = code
+  // Force reload the page content to refresh translations
+  window.location.href = switchLocalePath(code)
 }
 
 function getCurrentFlagIcon() {
