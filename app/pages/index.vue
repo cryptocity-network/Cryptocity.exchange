@@ -11,9 +11,18 @@ useHead({
 })
 
 useSeoMeta({
+  ogSiteName: 'Cryptocity.Exchange',
   title: t('SeoTitle'),
   description: t('SeoDescription'),
+  ogTitle: t('SeoTitle'),
+  ogDescription: t('SeoDescription'),
+  ogImage: '/ogcard.jpg',
+  twitterCard: 'summary_large_image',
+  twitterTitle: t('SeoTitle'),
+  twitterDescription: t('SeoDescription'),
+  twitterImage: '/ogcard.jpg',
 })
+
 defineOgImageComponent('NuxtSeo', {
   title: t('PageTitle'),
   description: t('PageDescription'),
