@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import CryptoMapBanner from "~/components/Banners/CryptoMapBanner.vue";
-import NimiqPayBanner from "~/components/Banners/NimiqPayBanner.vue";
+import CryptoMapBanner from '~/components/Banners/CryptoMapBanner.vue'
+import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue'
 
-const swap = ref(false);
-const widgetRef = ref<HTMLElement | null>(null);
-const { t } = useI18n();
+const swap = ref(false)
+const widgetRef = ref<HTMLElement | null>(null)
+const { t } = useI18n()
 
 useHead({
-  title: "Cryptocity.Exchange",
-});
+  title: 'Cryptocity.Exchange',
+})
 
 useSeoMeta({
-  title: t("SeoTitle"),
-  description: t("SeoDescription"),
-});
-defineOgImageComponent("NuxtSeo", {
-  title: t("PageTitle"),
-  description: t("PageDescription"),
-  colorMode: "light",
-});
+  title: t('SeoTitle'),
+  description: t('SeoDescription'),
+})
+defineOgImageComponent('NuxtSeo', {
+  title: t('PageTitle'),
+  description: t('PageDescription'),
+  colorMode: 'light',
+})
 
 function scrollToWidget() {
-  widgetRef.value?.scrollIntoView({ behavior: "smooth", block: "center" });
+  widgetRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 </script>
 
@@ -99,21 +99,21 @@ function scrollToWidget() {
 <style scoped>
 .custom-grid {
   display: grid;
-  grid-template-areas: "hero" "widget" "wallet";
+  grid-template-areas: 'hero' 'widget' 'wallet';
   gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-areas: "hero widget" "wallet widget";
+    grid-template-areas: 'hero widget' 'wallet widget';
   }
 
-  [data-section="hero"] {
+  [data-section='hero'] {
     grid-area: hero;
   }
 
-  [data-section="wallet"] {
+  [data-section='wallet'] {
     grid-area: wallet;
   }
-  [data-section="widget"] {
+  [data-section='widget'] {
     grid-area: widget;
   }
 }
