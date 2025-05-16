@@ -81,7 +81,7 @@ const { t } = useI18n()
               </div>
               <ul class="flex gap-4 md:gap-8">
                 <li>
-                  <NuxtLink to="https://x.com/kryptostadt" target="_blank" rel="noopener noreferrer">
+                  <NuxtLink to="https://x.com/Cryptocity_Net" target="_blank" rel="noopener noreferrer">
                     <Icon
                       name="fa6-brands:square-x-twitter"
                       class="text-[rgba(31,35,72,0.6)] hover:text-[rgba(31,35,72,0.8)] transition-colors duration-200"
@@ -117,7 +117,7 @@ const { t } = useI18n()
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="https://www.youtube.com/@Kryptostadt" target="_blank" rel="noopener noreferrer">
+                  <NuxtLink to="https://www.youtube.com/@cryptocity.network" target="_blank" rel="noopener noreferrer">
                     <Icon
                       name="fa-brands:youtube"
                       class="text-[rgba(31,35,72,0.6)] hover:text-[rgba(31,35,72,0.8)] transition-colors duration-200"
