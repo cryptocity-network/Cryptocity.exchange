@@ -1,23 +1,27 @@
 <script setup lang="ts">
-import CryptoMapBanner from '~/components/Banners/CryptoMapBanner.vue'
-import NimiqPayBanner from '~/components/Banners/NimiqPayBanner.vue'
+import CryptoMapBanner from "~/components/Banners/CryptoMapBanner.vue";
+import NimiqPayBanner from "~/components/Banners/NimiqPayBanner.vue";
 
-const swap = ref(false)
-const widgetRef = ref<HTMLElement | null>(null)
-const { t } = useI18n()
+const swap = ref(false);
+const widgetRef = ref<HTMLElement | null>(null);
+const { t } = useI18n();
+
+useHead({
+  title: "Cryptocity.Exchange",
+});
 
 useSeoMeta({
-  title: t('PageTitle'),
-  description: t('PageDescription'),
-})
-defineOgImageComponent('NuxtSeo', {
-  title: t('PageTitle'),
-  description: t('PageDescription'),
-  colorMode: 'light',
-})
+  title: t("SeoTitle"),
+  description: t("SeoDescription"),
+});
+defineOgImageComponent("NuxtSeo", {
+  title: t("PageTitle"),
+  description: t("PageDescription"),
+  colorMode: "light",
+});
 
 function scrollToWidget() {
-  widgetRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  widgetRef.value?.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 </script>
 
@@ -25,14 +29,16 @@ function scrollToWidget() {
   <div>
     <section class="container max-w-[1048px] mx-auto mt-30 mb-30 px- custom-grid">
       <!-- Hero -->
-      <div data-section="hero" class="space-y-1 mb-3 text-center md:text-left ">
-        <h1 class="pb-6 text-5xl/16 max-w-full md:max-w-[398px] text-wrap text-neutral px-4 md:px-0">
-          {{ !swap ? t('BuyAndSellCrypto') : t('SwapCrypto') }}
+      <div data-section="hero" class="space-y-1 mb-3 text-center md:text-left">
+        <h1
+          class="pb-6 text-5xl/16 max-w-full md:max-w-[398px] text-wrap text-neutral px-4 md:px-0"
+        >
+          {{ !swap ? t("BuyAndSellCrypto") : t("SwapCrypto") }}
         </h1>
         <h3
           class="pb-8 text-xl/8 max-w-full md:max-w-[248px] text-wrap font-semibold text-neutral opacity-60 px-4 md:px-0"
         >
-          {{ !swap ? t('BuyAndSellNim') : t('SwapStat') }}
+          {{ !swap ? t("BuyAndSellNim") : t("SwapStat") }}
         </h3>
         <div class="pb-20" @click="scrollToWidget">
           <SliderToggle v-model="swap" />
@@ -46,11 +52,17 @@ function scrollToWidget() {
       >
         <div class="flex flex-col gap-y-3">
           <p class="text-neutral max-w-[165px]">
-            {{ t('GetSelfHostedWallet') }}
+            {{ t("GetSelfHostedWallet") }}
           </p>
 
-          <NuxtLink to="https://wallet.nimiq.com/" target="_blank" external rel="noopener noreferrer" class="nq-pill-blue nq-arrow">
-            {{ t('Create') }}
+          <NuxtLink
+            to="https://wallet.nimiq.com/"
+            target="_blank"
+            external
+            rel="noopener noreferrer"
+            class="nq-pill-blue nq-arrow"
+          >
+            {{ t("Create") }}
           </NuxtLink>
         </div>
 
@@ -61,8 +73,12 @@ function scrollToWidget() {
             <div group-hocus:i-nimiq:logos-usdc i-nimiq:logos-usdc-mono />
             <div group-hocus:i-nimiq:logos-usdt i-nimiq:logos-usdt-mono />
           </div>
-          <span text="neutral-900 group-hocus:neutral" transition-colors class="mt-2 nq-label text-[9px]">
-            {{ t('SupportedCurrencies') }}
+          <span
+            text="neutral-900 group-hocus:neutral"
+            transition-colors
+            class="mt-2 nq-label text-[9px]"
+          >
+            {{ t("SupportedCurrencies") }}
           </span>
         </div>
       </div>
@@ -83,21 +99,21 @@ function scrollToWidget() {
 <style scoped>
 .custom-grid {
   display: grid;
-  grid-template-areas: 'hero' 'widget' 'wallet';
+  grid-template-areas: "hero" "widget" "wallet";
   gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-areas: 'hero widget' 'wallet widget';
+    grid-template-areas: "hero widget" "wallet widget";
   }
 
-  [data-section='hero'] {
+  [data-section="hero"] {
     grid-area: hero;
   }
 
-  [data-section='wallet'] {
+  [data-section="wallet"] {
     grid-area: wallet;
   }
-  [data-section='widget'] {
+  [data-section="widget"] {
     grid-area: widget;
   }
 }
