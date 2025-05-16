@@ -32,7 +32,7 @@ function scrollToWidget() {
         <h3
           class="pb-8 text-xl/8 max-w-full md:max-w-[248px] text-wrap font-semibold text-neutral opacity-60 px-4 md:px-0"
         >
-          {{ !swap ? t('BuyAndSellNim') : t('SwapCrypto') }}
+          {{ !swap ? t('BuyAndSellNim') : t('SwapStat') }}
         </h3>
         <div class="pb-20" @click="scrollToWidget">
           <SliderToggle v-model="swap" />
