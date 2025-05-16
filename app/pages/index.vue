@@ -94,8 +94,8 @@ function scrollToWidget() {
 
       <!-- Widget -->
       <div ref="widgetRef" data-section="widget" class="flex justify-center">
-        <CoinifyWidget v-if="!swap" />
-        <LetsexchangeWidget v-else />
+        <CoinifyWidget v-if="!swap" :key="`coinify-${swap}`" />
+        <LetsexchangeWidget v-else :key="`letsexchange-${swap}`" />
       </div>
     </section>
 
