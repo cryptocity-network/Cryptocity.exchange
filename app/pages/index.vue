@@ -68,8 +68,7 @@ function scrollToWidget() {
             to="https://wallet.nimiq.com/"
             target="_blank"
             external
-            rel="noopener noreferrer"
-            class="nq-pill-blue nq-arrow"
+            nq-pill px-0 nq-arrow un-text-neutral
           >
             {{ t("Create") }}
           </NuxtLink>
@@ -77,10 +76,10 @@ function scrollToWidget() {
 
         <div class="flex-1 flex flex-col items-center justify-center pl-4">
           <div class="flex flex-row gap-2 children:!size-6.5 text-neutral-700">
-            <div group-hocus:i-nimiq:logos-nimiq i-nimiq:logos-nimiq-mono />
-            <div group-hocus:i-nimiq:logos-bitcoin i-nimiq:logos-bitcoin-mono />
-            <div group-hocus:i-nimiq:logos-usdc i-nimiq:logos-usdc-mono />
-            <div group-hocus:i-nimiq:logos-usdt i-nimiq:logos-usdt-mono />
+            <div i-nimiq:logos-nimiq />
+            <div i-nimiq:logos-bitcoin />
+            <div i-nimiq:logos-usdc />
+            <div i-nimiq:logos-usdt />
           </div>
           <span
             text="neutral-900 group-hocus:neutral"
