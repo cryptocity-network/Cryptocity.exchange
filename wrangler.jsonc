@@ -1,0 +1,1 @@
+{ "$schema": "node_modules/wrangler/config-schema.json", "name": "nimiq-exchange", "main": "dist/server/index.mjs", "assets": { "directory": "dist/public" }, "compatibility_date": "2025-12-01", "compatibility_flags": ["nodejs_compat"] }

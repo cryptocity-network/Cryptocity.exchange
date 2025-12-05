@@ -25,6 +25,8 @@ export default defineNuxtConfig({
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {},
 
+  nitro: { preset: 'cloudflare_module' },
+
   // https://eslint.nuxt.com
   eslint: {
     config: {
